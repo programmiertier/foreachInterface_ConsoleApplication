@@ -12,7 +12,6 @@ namespace foreachInterface_ConsoleApplication
     {
         public int[] zahlen = new int[10];      // new, weil auch int ist eine Klasse, genau wie string oder char usw...
 
-
         public A()
         {
             WriteLine("Ich bin ein A");
@@ -38,18 +37,14 @@ namespace foreachInterface_ConsoleApplication
             {
                 meineAs.Add(new A());
             }
-
             WriteLine("Es sind {0} Elemente in meineAs", meineAs.Count);
-
             ReadLine();
 
             foreach (var element in meineAs)
             {
                 WriteLine("Wieder ein A Element");
             }
-
             ReadLine();
-
             foreach (var element in meineAs)
             {
                 foreach (var zahl in element.zahlen) // Enumerable hinzufügen          // foreach ( var zahl in element) element weiß nicht, wie oft das denn passieren soll
@@ -57,9 +52,7 @@ namespace foreachInterface_ConsoleApplication
                     WriteLine(zahl);
                 }
             }
-
             ReadLine();
-
             // WriteLine(meineAs[0].zahlen[3]);       // einzelnes Element der Liste, dort ist ein Feld von Zahlen!
         }
     }
